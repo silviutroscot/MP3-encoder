@@ -173,10 +173,10 @@ def check_assignment3():
 def check_assignment4():
 
     n_tests = 4
-
+    
     from parameters import EncoderParameters
     params = EncoderParameters(44100, 2, 64)
-
+    print("188")
     for i in range(1,n_tests+1):
         fin_name = 'data/a4_testInput' + str(i) + '.txt'
         fout_name = 'data/a4_testOutput' + str(i) + '.txt'
@@ -185,7 +185,7 @@ def check_assignment4():
         val_out = np.loadtxt(fout_name)
 
         val_chk = np.zeros(val_out.shape)
-
+        
         for r,row in enumerate(val_in):
             val = row[0]
             scf = row[1]
